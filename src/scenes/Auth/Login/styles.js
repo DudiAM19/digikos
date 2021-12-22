@@ -1,4 +1,3 @@
-import React from 'react';
 import {StyleSheet, Dimensions} from 'react-native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {Colors, FONTS} from 'styles';
@@ -26,21 +25,21 @@ export default StyleSheet.create({
   },
   slider1: {
     width: width * 0.06,
-    height: width * 0.02,
+    height: width * 0.015,
     backgroundColor: Colors.PRIMARY,
     borderRadius: 10,
     marginLeft: width * 0.11,
   },
   slider2: {
-    width: width * 0.02,
-    height: width * 0.02,
+    width: width * 0.015,
+    height: width * 0.015,
     borderRadius: 10,
     marginLeft: width * 0.01,
     backgroundColor: Colors.GREY,
   },
   slider3: {
-    width: width * 0.02,
-    height: width * 0.02,
+    width: width * 0.015,
+    height: width * 0.015,
     borderRadius: 10,
     marginHorizontal: width * 0.01,
     backgroundColor: Colors.GREY,

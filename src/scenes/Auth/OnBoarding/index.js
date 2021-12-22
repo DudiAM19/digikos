@@ -11,15 +11,12 @@ const OnBoarding = ({navigation}) => {
         <Text style={styles.textsign}>Masuk atau buat akun baru</Text>
         <Image
           style={styles.img}
-          source={require('../../../Assets/img/rocket.png')}
+          source={require('assets/images/rocket.png')}
         />
-        <Button
-          title="Go to Sign In"
-          onPress={() => navigation.navigate('login')}
-        />
+        <Button title="Masuk" onPress={() => navigation.navigate('login')} />
         <TouchableOpacity style={styles.btnsignup}>
-          <Text style={styles.textbtnnoaccount}>No account yet?</Text>
-          <Text style={styles.textbtnsingup}>Sign Up</Text>
+          <Text style={styles.textbtnnoaccount}>Belum punya akun?</Text>
+          <Text style={styles.textbtnsingup}>Daftar</Text>
         </TouchableOpacity>
       </View>
     </Container>

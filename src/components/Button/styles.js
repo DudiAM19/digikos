@@ -6,7 +6,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 export default StyleSheet.create({
   container: {
     width: width * 0.8,
-    height: width * 0.15,
+    height: width * 0.14,
     backgroundColor: Colors.PRIMARY,
     alignItems: 'center',
     justifyContent: 'center',
@@ -16,5 +16,7 @@ export default StyleSheet.create({
   title: {
     color: 'white',
     fontFamily: FONTS.poppins[500],
+    fontSize: RFValue(14),
+    marginTop: width * 0.005,
   },
 });

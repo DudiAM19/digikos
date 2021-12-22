@@ -16,6 +16,7 @@ export default StyleSheet.create({
   textsign: {
     color: Colors.GREY_TEXT,
     fontFamily: FONTS.poppins[500],
+    marginTop: -width * 0.02,
   },
   img: {
     width: width * 0.8,
@@ -37,7 +38,7 @@ export default StyleSheet.create({
   },
   btnsignup: {
     width: width * 0.8,
-    height: width * 0.15,
+    height: width * 0.14,
     backgroundColor: 'rgba(252, 106, 35, 0.1)',
     borderRadius: 16,
     alignItems: 'center',
@@ -51,6 +52,6 @@ export default StyleSheet.create({
   textbtnsingup: {
     color: Colors.ORANGE,
     fontFamily: FONTS.poppins[500],
-    marginHorizontal: width * 0.02,
+    marginHorizontal: width * 0.01,
   },
 });

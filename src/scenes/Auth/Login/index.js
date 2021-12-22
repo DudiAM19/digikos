@@ -25,7 +25,7 @@ const Login = ({navigation}) => {
           <View style={styles.slider3} />
         </View>
         <View style={styles.formsection}>
-          <Text style={styles.textform}>Email atau Kode Apartemen</Text>
+          <Text style={styles.textform}>Email atau No.Telepon</Text>
           <View style={styles.inputsection}>
             <TextInput placeholder="example@mail.com" style={styles.input} />
           </View>
@@ -40,7 +40,7 @@ const Login = ({navigation}) => {
           </View>
         </View>
         <View style={styles.btnsection}>
-          <Button title="Sign In" />
+          <Button title="Masuk" />
         </View>
       </ScrollView>
     </Container>
