@@ -13,8 +13,10 @@ const OnBoarding = ({navigation}) => {
           style={styles.img}
           source={require('assets/images/rocket.png')}
         />
-        <Button title="Masuk" onPress={() => navigation.navigate('login')} />
-        <TouchableOpacity style={styles.btnsignup}>
+        <Button title="Masuk" onPress={() => navigation.navigate('Login')} />
+        <TouchableOpacity
+          style={styles.btnsignup}
+          onPress={() => navigation.navigate('ChooseRole')}>
           <Text style={styles.textbtnnoaccount}>Belum punya akun?</Text>
           <Text style={styles.textbtnsingup}>Daftar</Text>
         </TouchableOpacity>

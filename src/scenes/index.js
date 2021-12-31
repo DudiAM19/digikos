@@ -1,3 +1,5 @@
 import OnBoarding from './Auth/OnBoarding';
 import Login from './Auth/Login';
-export {OnBoarding, Login};
+import ChooseRole from './Auth/ChooseRole';
+
+export {OnBoarding, Login, ChooseRole};

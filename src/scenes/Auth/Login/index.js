@@ -18,7 +18,7 @@ const Login = ({navigation}) => {
         <Icon name="arrowleft" type="AntDesign" style={styles.arrowleft} />
       </TouchableOpacity>
       <ScrollView>
-        <Text style={styles.textwelcome}>Selamat datang kembali</Text>
+        <Text style={styles.textwelcome}>Selamat datang {'\n'}kembali</Text>
         <View style={styles.slidersection}>
           <View style={styles.slider1} />
           <View style={styles.slider2} />
