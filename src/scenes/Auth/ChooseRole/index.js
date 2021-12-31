@@ -9,7 +9,7 @@ const CHOOSE_ROLE = [
     image: require('assets/images/man-1.png'),
   },
   {
-    label: 'Pemilik',
+    label: 'Penyewa',
     image: require('assets/images/adults-1.png'),
   },
 ];
@@ -48,7 +48,11 @@ const ChooseRole = ({navigation}) => {
         </View>
       </ScrollView>
       <View style={styles.buttonSection}>
-        <Button title="Konfirmasi" style={styles.button} />
+        <Button
+          title="Konfirmasi"
+          style={styles.button}
+          onPress={() => navigation.navigate('Register')}
+        />
       </View>
     </Container>
   );

@@ -70,11 +70,14 @@ export default StyleSheet.create({
     fontFamily: FONTS.poppins[500],
     color: Colors.DRAKER_BLACK,
     fontSize: RFValue(14),
+    marginTop: width * 0.02,
   },
   buttonSection: {
-    marginHorizontal: width * 0.07,
+    paddingHorizontal: width * 0.07,
+    height: width * 0.25,
+    backgroundColor: Colors.WHITE,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  button: {
-    bottom: width * 0.03,
-  },
+  button: {},
 });

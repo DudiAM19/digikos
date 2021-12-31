@@ -7,3 +7,4 @@ export const ORANGE = '#FC6A23';
 export const BLACK_TEXT = '#696969';
 export const GREY_TEXT = '#D2D2D2';
 export const GREY = '#DDDDDD';
+export const WHITE = '#FFFFFF';
