@@ -23,22 +23,9 @@ export default StyleSheet.create({
     height: width * 0.8,
     marginVertical: width * 0.1,
   },
-  btnsign: {
-    width: width * 0.8,
-    height: width * 0.15,
-    backgroundColor: Colors.PRIMARY,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 16,
-    marginVertical: width * 0.04,
-  },
-  textbtnsign: {
-    color: 'white',
-    fontFamily: FONTS.poppins[500],
-  },
   btnsignup: {
     width: width * 0.8,
-    height: width * 0.14,
+    height: width * 0.13,
     backgroundColor: 'rgba(252, 106, 35, 0.1)',
     borderRadius: 16,
     alignItems: 'center',
