@@ -5,12 +5,12 @@ import {RFValue} from 'react-native-responsive-fontsize';
 
 export default StyleSheet.create({
   container: {
-    width: width * 0.8,
+    width: '100%',
     height: width * 0.13,
     backgroundColor: Colors.PRIMARY,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 16,
+    borderRadius: width * 0.035,
     marginVertical: width * 0.04,
   },
   title: {

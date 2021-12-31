@@ -5,7 +5,9 @@ const {width} = Dimensions.get('window');
 
 export default StyleSheet.create({
   body: {
+    flex: 1,
     alignItems: 'center',
+    paddingHorizontal: width * 0.06,
   },
   textwelcome: {
     fontFamily: FONTS.poppins[600],
@@ -24,7 +26,7 @@ export default StyleSheet.create({
     marginVertical: width * 0.1,
   },
   btnsignup: {
-    width: width * 0.8,
+    width: '100%',
     height: width * 0.13,
     backgroundColor: 'rgba(252, 106, 35, 0.1)',
     borderRadius: 16,

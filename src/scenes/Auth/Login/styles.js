@@ -4,11 +4,17 @@ import {Colors, FONTS} from 'styles';
 const {width} = Dimensions.get('window');
 
 export default StyleSheet.create({
+  contaner: {
+    flex: 1,
+    marginHorizontal: width * 0.07,
+  },
+  headerSection: {
+    flex: 1,
+  },
   header: {
     width: width,
     height: width * 0.3,
     justifyContent: 'center',
-    marginHorizontal: width * 0.08,
   },
   arrowleft: {
     fontSize: RFValue(25),
@@ -18,7 +24,6 @@ export default StyleSheet.create({
     fontFamily: FONTS.poppins[500],
     color: Colors.DRAKER_BLACK,
     fontSize: RFValue(25),
-    marginHorizontal: width * 0.08,
   },
   slidersection: {
     flexDirection: 'row',
@@ -28,7 +33,6 @@ export default StyleSheet.create({
     height: width * 0.013,
     backgroundColor: Colors.PRIMARY,
     borderRadius: 10,
-    marginLeft: width * 0.08,
   },
   slider2: {
     width: width * 0.015,
@@ -44,28 +48,29 @@ export default StyleSheet.create({
     marginHorizontal: width * 0.01,
     backgroundColor: Colors.GREY,
   },
-  formsection: {
-    marginVertical: width * 0.17,
-    paddingHorizontal: width * 0.08,
+  formSection: {
+    flex: 1,
+    marginTop: width * 0.3,
   },
-  textform: {
+  inputItem: {
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.LINE_STROKE,
+    marginVertical: width * 0.02,
+  },
+  inputLabel: {
     fontFamily: FONTS.poppins[500],
     color: Colors.GREY_LIGHT,
-    marginTop: width * 0.1,
+    fontSize: RFValue(13),
   },
   input: {
-    width: width * 0.8,
-    // backgroundColor: Colors,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.GREY,
-    fontFamily: FONTS.poppins[400],
-    color: FONTS.GREY,
+    fontSize: RFValue(13),
+    paddingHorizontal: 0,
+    marginTop: -width * 0.015,
   },
-  inputsection: {
-    // width: width,
-    alignItems: 'center',
+  buttonSection: {
+    marginHorizontal: width * 0.07,
   },
-  btnsection: {
-    alignItems: 'center',
+  button: {
+    bottom: width * 0.03,
   },
 });
