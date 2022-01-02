@@ -1,7 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabStackScreen from '../tab';
-import {Property} from 'scenes';
+import {Property, SearchTenant} from 'scenes';
 
 const Stack = createNativeStackNavigator();
 const AppStack = () => {
@@ -11,6 +11,7 @@ const AppStack = () => {
       initialRouteName="root">
       <Stack.Screen name="root" component={TabStackScreen} />
       <Stack.Screen name="Property" component={Property} />
+      <Stack.Screen name="SearchTenant" component={SearchTenant} />
     </Stack.Navigator>
   );
 };
