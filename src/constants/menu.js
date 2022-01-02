@@ -3,7 +3,7 @@ module.exports = [
     label: 'Properti',
     icon: require('assets/images/menu/home.png'),
     color: ['rgba(252, 106, 35, 0.65)', 'rgba(252, 106, 35, 1)', '#FC6A23'],
-    route: '',
+    route: 'Property',
   },
   {
     label: 'Penjaga',

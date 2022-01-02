@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -75,7 +75,7 @@ const Home = ({navigation}) => {
         <View style={styles.menuSection}>
           <View style={styles.menuListSection}>
             {menu.map((item, index) => (
-              <MenuList key={index} item={item} />
+              <MenuList key={index} item={item} navigation={navigation} />
             ))}
           </View>
           <View style={styles.separator} />
@@ -127,8 +127,11 @@ const Home = ({navigation}) => {
   );
 };
 
-const MenuList = ({item}) => (
-  <TouchableOpacity activeOpacity={0.5} style={styles.menuList}>
+const MenuList = ({item, navigation}) => (
+  <TouchableOpacity
+    onPress={() => navigation.navigate('Property')}
+    activeOpacity={0.5}
+    style={styles.menuList}>
     <LinearGradient
       start={{x: 0.0, y: 0.25}}
       end={{x: 0.5, y: 1.0}}
