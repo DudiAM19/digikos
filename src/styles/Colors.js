@@ -10,3 +10,4 @@ export const GREY = '#DDDDDD';
 export const WHITE = '#FFFFFF';
 export const BACKGROUND = '#F2F5F6';
 export const LIGHT_TEXT = '#989898';
+export const GREEN = '#1FD426';

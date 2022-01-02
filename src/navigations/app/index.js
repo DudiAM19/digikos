@@ -6,7 +6,9 @@ import {Property} from 'scenes';
 const Stack = createNativeStackNavigator();
 const AppStack = () => {
   return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
+    <Stack.Navigator
+      screenOptions={{headerShown: false}}
+      initialRouteName="root">
       <Stack.Screen name="root" component={TabStackScreen} />
       <Stack.Screen name="Property" component={Property} />
     </Stack.Navigator>

@@ -48,12 +48,12 @@ const chartConfig = {
 
 const Home = ({navigation}) => {
   const isFocused = useIsFocused();
+  // console.log(isFocused)
   return (
     <SafeAreaView style={styles.root}>
-      <StatusBar
-        barStyle={isFocused ? 'light-content' : 'dark-content'}
-        backgroundColor={isFocused ? '#1db1f2' : '#fff'}
-      />
+      {isFocused && (
+        <StatusBar barStyle={'light-content'} backgroundColor={'#1db1f2'} />
+      )}
       <ScrollView>
         <ImageBackground
           source={require('assets/images/home-header.png')}

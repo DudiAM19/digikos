@@ -5,7 +5,7 @@ const {width} = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
-    height: width * 0.16,
+    height: width * 0.14,
     backgroundColor: Colors.WHITE,
     paddingHorizontal: width * 0.04,
   },
@@ -39,7 +39,7 @@ export default StyleSheet.create({
   },
   smTitle: {
     fontFamily: FONTS.poppins[500],
-    fontSize: RFValue(16),
+    fontSize: RFValue(15),
     color: Colors.DRAKER_BLACK,
   },
   lgTitle: {
