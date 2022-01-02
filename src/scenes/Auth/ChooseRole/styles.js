@@ -9,9 +9,9 @@ export default StyleSheet.create({
     paddingHorizontal: width * 0.07,
   },
   header: {
-    width: width,
-    height: width * 0.3,
+    height: width * 0.16,
     justifyContent: 'center',
+    marginBottom: width * 0.05,
   },
   arrowleft: {
     fontSize: RFValue(25),

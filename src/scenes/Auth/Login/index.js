@@ -35,7 +35,11 @@ const Login = ({navigation}) => {
         </View>
       </ScrollView>
       <View style={styles.buttonSection}>
-        <Button title="Masuk" style={styles.button} />
+        <Button
+          title="Masuk"
+          style={styles.button}
+          onPress={() => navigation.navigate('app')}
+        />
       </View>
     </Container>
   );

@@ -1,0 +1,18 @@
+{
+    "Beranda": {
+        "name": "home",
+        "type": "Feather"
+    },
+    "Penyewa": {
+        "name": "contacts",
+        "type": "AntDesign"
+    },
+    "Pesan": {
+        "name": "mail",
+        "type": "Feather"
+    },
+    "Profil": {
+        "name": "user",
+        "type": "FontAwesome5"
+    }
+}

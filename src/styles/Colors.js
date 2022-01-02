@@ -8,3 +8,5 @@ export const BLACK_TEXT = '#696969';
 export const GREY_TEXT = '#D2D2D2';
 export const GREY = '#DDDDDD';
 export const WHITE = '#FFFFFF';
+export const BACKGROUND = '#F2F5F6';
+export const LIGHT_TEXT = '#989898';
