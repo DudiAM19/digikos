@@ -11,6 +11,7 @@ import Inbox from './app/Inbox';
 import Profile from './app/Profile';
 import Property from './app/Property';
 import SearchTenant from './app/Tenant/SearchTenant';
+import DetailTenant from './app/Tenant/DetailTenant';
 
 export {
   OnBoarding,
@@ -23,4 +24,5 @@ export {
   Profile,
   Property,
   SearchTenant,
+  DetailTenant,
 };

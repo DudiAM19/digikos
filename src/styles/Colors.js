@@ -12,3 +12,4 @@ export const BACKGROUND = '#F2F5F6';
 export const LIGHT_TEXT = '#989898';
 export const GREEN = '#1FD426';
 export const BLACK = '#000000';
+export const GREEN_LIGHT = '#1DAE05';
