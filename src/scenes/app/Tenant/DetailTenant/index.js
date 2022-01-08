@@ -4,10 +4,10 @@ import {Container, Header, Icon} from 'components';
 import {Colors} from 'styles';
 import styles from './styles';
 
-const DetailTenant = () => {
+const DetailTenant = ({navigation}) => {
   return (
     <Container>
-      <Header smTitle="Detail Penyewa " />
+      <Header smTitle="Detail Penyewa " navigation={navigation} />
       <View style={styles.tenantsection}>
         <View>
           <Image

@@ -31,8 +31,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
   btn: {
-    width: width * 0.16,
-    height: width * 0.16,
+    width: width * 0.15,
+    height: width * 0.15,
     backgroundColor: Colors.WHITE,
     justifyContent: 'center',
     alignItems: 'center',

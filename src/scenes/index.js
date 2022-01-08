@@ -12,6 +12,8 @@ import Profile from './app/Profile';
 import Property from './app/Property';
 import SearchTenant from './app/Tenant/SearchTenant';
 import DetailTenant from './app/Tenant/DetailTenant';
+import NeedApprovel from './app/Inbox/NeedApproval';
+import Notification from './app/Inbox/Notification';
 
 export {
   OnBoarding,
@@ -25,4 +27,6 @@ export {
   Property,
   SearchTenant,
   DetailTenant,
+  NeedApprovel,
+  Notification,
 };

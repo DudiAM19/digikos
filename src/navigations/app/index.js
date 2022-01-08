@@ -1,7 +1,13 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabStackScreen from '../tab';
-import {Property, SearchTenant, DetailTenant} from 'scenes';
+import {
+  Property,
+  SearchTenant,
+  DetailTenant,
+  NeedApprovel,
+  Notification,
+} from 'scenes';
 
 const Stack = createNativeStackNavigator();
 const AppStack = () => {
@@ -13,6 +19,8 @@ const AppStack = () => {
       <Stack.Screen name="Property" component={Property} />
       <Stack.Screen name="SearchTenant" component={SearchTenant} />
       <Stack.Screen name="DetailTenant" component={DetailTenant} />
+      <Stack.Screen name="NeedApprovel" component={NeedApprovel} />
+      <Stack.Screen name="Notification" component={Notification} />
     </Stack.Navigator>
   );
 };
