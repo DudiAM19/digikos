@@ -6,8 +6,12 @@ import styles from './styles';
 
 const DetailTenant = ({navigation}) => {
   return (
-    <Container>
-      <Header smTitle="Detail Penyewa " navigation={navigation} />
+    <Container barColor="transparent">
+      <Header
+        smTitle="Detail Penyewa"
+        transparent={true}
+        navigation={navigation}
+      />
       <View style={styles.tenantsection}>
         <View>
           <Image

@@ -4,9 +4,9 @@ import {Icon} from 'components';
 import styles from './styles';
 
 const Header = props => {
-  const {smTitle, onSearch, lgTitle, navigation} = props;
+  const {smTitle, onSearch, lgTitle, navigation, transparent} = props;
   return (
-    <View style={styles.container}>
+    <View style={styles.container(transparent)}>
       <View style={styles.section}>
         {smTitle && (
           <TouchableOpacity
@@ -50,6 +50,7 @@ Header.defaultProps = {
   smTitle: undefined,
   lgTitle: undefined,
   onSearch: undefined,
+  transparent: false,
 };
 
 export default Header;

@@ -13,8 +13,8 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   imgprofile: {
-    width: width * 0.14,
-    height: width * 0.14,
+    width: width * 0.12,
+    height: width * 0.12,
   },
   textsection: {
     marginHorizontal: width * 0.04,
@@ -22,13 +22,14 @@ export default StyleSheet.create({
   },
   textname: {
     fontFamily: FONTS.poppins[500],
-    fontSize: RFValue(16),
+    fontSize: RFValue(15.5),
     color: Colors.BLACK,
   },
   textroom: {
     fontFamily: FONTS.poppins[500],
-    fontSize: RFValue(11),
+    fontSize: RFValue(12),
     color: Colors.DRAKER_BLACK,
+    marginTop: -width * 0.01,
   },
   iconsection: {
     flexDirection: 'row',

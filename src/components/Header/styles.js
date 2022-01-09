@@ -4,11 +4,11 @@ import {RFValue} from 'react-native-responsive-fontsize';
 const {width} = Dimensions.get('window');
 
 export default StyleSheet.create({
-  container: {
+  container: isTransparent => ({
     height: width * 0.14,
-    backgroundColor: Colors.WHITE,
+    backgroundColor: isTransparent ? 'transparent' : Colors.WHITE,
     paddingHorizontal: width * 0.04,
-  },
+  }),
   section: {
     flex: 1,
     flexDirection: 'row',

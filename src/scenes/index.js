@@ -1,8 +1,8 @@
 // auth
-import OnBoarding from './Auth/OnBoarding';
-import Login from './Auth/Login';
-import ChooseRole from './Auth/ChooseRole';
-import Register from './Auth/Register';
+import OnBoarding from './auth/OnBoarding';
+import Login from './auth/Login';
+import ChooseRole from './auth/ChooseRole';
+import Register from './auth/Register';
 
 // app
 import Home from './app/Home';

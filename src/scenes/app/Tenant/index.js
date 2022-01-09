@@ -36,7 +36,7 @@ const Item = props => {
     <View>
       <View style={styles.tenantsection}>
         <Image source={props.img} style={styles.imgprofile} />
-        <TouchableOpacity style={styles.textsection}>
+        <TouchableOpacity style={styles.textsection} onPress={props.onPress}>
           <Text style={styles.textname}>{props.name}</Text>
           <Text style={styles.textroom}>{props.room}</Text>
         </TouchableOpacity>
@@ -65,7 +65,12 @@ const Tenant = ({navigation}) => {
         data={DATA}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({item}) => (
-          <Item img={item.img} name={item.name} room={item.room} />
+          <Item
+            img={item.img}
+            name={item.name}
+            onPress={() => navigation.navigate('DetailTenant')}
+            room={item.room}
+          />
         )}
       />
     </Container>

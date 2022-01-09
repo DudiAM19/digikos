@@ -9,12 +9,12 @@ export default StyleSheet.create({
     flex: 1,
   },
   imgprofile: {
-    width: width * 0.23,
-    height: width * 0.23,
-    marginTop: width * 0.08,
+    width: width * 0.2,
+    height: width * 0.2,
+    marginTop: width * 0.05,
   },
   textsection: {
-    marginTop: width * 0.05,
+    marginTop: width * 0.04,
   },
   textname: {
     fontFamily: FONTS.poppins[600],
@@ -26,18 +26,19 @@ export default StyleSheet.create({
     fontFamily: FONTS.poppins[500],
     color: Colors.LIGHT_TEXT,
     textAlign: 'center',
+    marginTop: -width * 0.014,
   },
   iconsection: {
     flexDirection: 'row',
   },
   btn: {
-    width: width * 0.15,
-    height: width * 0.15,
+    width: width * 0.13,
+    height: width * 0.13,
     backgroundColor: Colors.WHITE,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: width * 0.1,
-    marginVertical: width * 0.08,
+    marginVertical: width * 0.05,
     marginHorizontal: width * 0.03,
   },
   iconcall: {
@@ -52,12 +53,13 @@ export default StyleSheet.create({
     backgroundColor: Colors.WHITE,
     flex: 1,
     width: width,
-    borderTopRightRadius: width * 0.1,
-    borderTopLeftRadius: width * 0.1,
+    borderTopRightRadius: width * 0.06,
+    borderTopLeftRadius: width * 0.06,
     padding: width * 0.06,
   },
   datasection: {
     flexDirection: 'row',
+    paddingVertical: width * 0.03,
   },
   text1: {
     flex: 1,
@@ -71,8 +73,9 @@ export default StyleSheet.create({
     color: Colors.BLACK,
   },
   border: {
-    height: width * 0.003,
+    height: width * 0.001,
     backgroundColor: Colors.LINE_STROKE,
-    marginVertical: width * 0.02,
+    marginBottom: width * 0.015,
+    // marginVertical: width * 0.02,
   },
 });
