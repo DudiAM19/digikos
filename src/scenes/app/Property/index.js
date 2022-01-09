@@ -17,7 +17,7 @@ const Property = ({navigation}) => {
           hideLabelShadow={false}
           buttonColor="#FC6A23"
           title="Apartemen"
-          onPress={() => console.log('notes tapped!')}>
+          onPress={() => navigation.navigate('NewProperty')}>
           <Icon
             name="apartment"
             type="MaterialIcons"
@@ -28,7 +28,7 @@ const Property = ({navigation}) => {
           hideLabelShadow={false}
           buttonColor="#AC4DFE"
           title="Hotel"
-          onPress={() => {}}>
+          onPress={() => navigation.navigate('NewProperty')}>
           <Icon
             name="office-building"
             type="MaterialCommunityIcons"
@@ -39,7 +39,7 @@ const Property = ({navigation}) => {
           hideLabelShadow={false}
           buttonColor="#EA307D"
           title="Kost"
-          onPress={() => {}}>
+          onPress={() => navigation.navigate('NewProperty')}>
           <Icon
             name="warehouse"
             type="MaterialCommunityIcons"

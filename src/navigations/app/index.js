@@ -7,6 +7,7 @@ import {
   DetailTenant,
   NeedApprovel,
   Notification,
+  NewProperty,
 } from 'scenes';
 
 const Stack = createNativeStackNavigator();
@@ -21,6 +22,7 @@ const AppStack = () => {
       <Stack.Screen name="DetailTenant" component={DetailTenant} />
       <Stack.Screen name="NeedApprovel" component={NeedApprovel} />
       <Stack.Screen name="Notification" component={Notification} />
+      <Stack.Screen name="NewProperty" component={NewProperty} />
     </Stack.Navigator>
   );
 };
