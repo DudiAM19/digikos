@@ -74,5 +74,6 @@ export default StyleSheet.create({
     color: Colors.DRAKER_BLACK,
     flex: 1,
     fontSize: RFValue(16),
+    marginTop: width * 0.01,
   },
 });
