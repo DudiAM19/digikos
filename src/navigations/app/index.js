@@ -8,6 +8,12 @@ import {
   NeedApprovel,
   Notification,
   NewProperty,
+  BillPayment,
+  TenantComplaint,
+  TenantOperation,
+  Failure,
+  SubscriptionDetails,
+  DetailBillPayment,
 } from 'scenes';
 
 const Stack = createNativeStackNavigator();
@@ -23,6 +29,15 @@ const AppStack = () => {
       <Stack.Screen name="NeedApprovel" component={NeedApprovel} />
       <Stack.Screen name="Notification" component={Notification} />
       <Stack.Screen name="NewProperty" component={NewProperty} />
+      <Stack.Screen name="BillPayment" component={BillPayment} />
+      <Stack.Screen name="TenantComplaint" component={TenantComplaint} />
+      <Stack.Screen name="TenantOperation" component={TenantOperation} />
+      <Stack.Screen name="Failure" component={Failure} />
+      <Stack.Screen
+        name="SubscriptionDetails"
+        component={SubscriptionDetails}
+      />
+      <Stack.Screen name="DetailBillPayment" component={DetailBillPayment} />
     </Stack.Navigator>
   );
 };

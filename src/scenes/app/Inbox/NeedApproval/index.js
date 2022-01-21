@@ -10,66 +10,68 @@ const DATA = [
     textapproveltype: 'Pembayaran Tagihan',
     icontype: 'Ionicons',
     color: Colors.ORANGE,
+    route: 'BillPayment',
   },
   {
     icon: 'checkbox-marked-circle-outline',
     textapproveltype: 'Oper Penyewa',
     icontype: 'MaterialCommunityIcons',
     color: '#AC4DFE',
+    route: 'TenantOperation',
   },
   {
     icon: 'tool',
     textapproveltype: 'Kerusakan',
     icontype: 'Feather',
     color: '#EA307D',
+    route: 'Failure',
   },
   {
     icon: 'md-snow-sharp',
     textapproveltype: 'Keluhan Penyewa',
     icontype: 'Ionicons',
     color: '#1FB8FC',
+    route: 'TenantComplaint',
   },
 ];
 
 const Item = props => {
   return (
-    <View style={styles.approvelsection}>
+    <TouchableOpacity style={styles.approvelsection} onPress={props.onPress}>
       <Icon
         name={props.icon}
         type={props.icontype}
         style={styles.icon(props.color)}
       />
       <View>
-        <TouchableOpacity style={styles.textsection}>
+        <View style={styles.textsection}>
           <Text style={styles.textapproveltype}>{props.textapproveltype}</Text>
           <Icon
             name="chevron-forward"
             type="Ionicons"
             style={styles.forwardicon}
           />
-        </TouchableOpacity>
+        </View>
         <View style={styles.border} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
-const NeedApprovel = () => {
+const NeedApprovel = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <FlatList
-          data={DATA}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({item}) => (
-            <Item
-              icon={item.icon}
-              textapproveltype={item.textapproveltype}
-              icontype={item.icontype}
-              color={item.color}
-            />
-          )}
-        />
+        {DATA.map((item, index) => (
+          <Item
+            key={index}
+            icon={item.icon}
+            textapproveltype={item.textapproveltype}
+            icontype={item.icontype}
+            color={item.color}
+            onPress={() => navigation.navigate(item.route)}
+          />
+        ))}
       </View>
     </View>
   );

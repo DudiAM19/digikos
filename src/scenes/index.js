@@ -10,11 +10,17 @@ import Tenant from './app/Tenant';
 import Inbox from './app/Inbox';
 import Profile from './app/Profile';
 import Property from './app/Property';
+import NewProperty from './app/Property/NewProperty';
 import SearchTenant from './app/Tenant/SearchTenant';
 import DetailTenant from './app/Tenant/DetailTenant';
 import NeedApprovel from './app/Inbox/NeedApproval';
 import Notification from './app/Inbox/Notification';
-import NewProperty from './app/Property/NewProperty';
+import Failure from './app/Inbox/NeedApproval/Failure';
+import BillPayment from './app/Inbox/NeedApproval/BillPayment';
+import TenantComplaint from './app/Inbox/NeedApproval/TenantComplaint';
+import TenantOperation from './app/Inbox/NeedApproval/TenantOperation';
+import SubscriptionDetails from './app/Profile/SubscriptionDetails';
+import DetailBillPayment from './app/Inbox/NeedApproval/BillPayment/DetailBillPayment';
 
 export {
   OnBoarding,
@@ -31,4 +37,10 @@ export {
   NeedApprovel,
   Notification,
   NewProperty,
+  BillPayment,
+  TenantOperation,
+  TenantComplaint,
+  Failure,
+  SubscriptionDetails,
+  DetailBillPayment,
 };

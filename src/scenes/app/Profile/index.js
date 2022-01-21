@@ -39,7 +39,7 @@ const DATA = [
 
 const Item = props => {
   return (
-    <TouchableOpacity style={styles.fitursection}>
+    <TouchableOpacity style={styles.fitursection} onPress={props.onPress}>
       <Icon
         name={props.icon}
         type={props.icontype}
@@ -89,6 +89,7 @@ const Profile = ({navigation}) => {
                 icontype={item.icontype}
                 text={item.text}
                 color={item.color}
+                onPress={() => navigation.navigate('SubscriptionDetails')}
               />
             )}
           />

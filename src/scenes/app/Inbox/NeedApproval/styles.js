@@ -28,6 +28,7 @@ export default StyleSheet.create({
     fontFamily: FONTS.poppins[500],
     color: Colors.DRAKER_BLACK,
     flex: 1,
+    marginTop: width * 0.005,
   },
   forwardicon: {
     fontSize: RFValue(18),
@@ -38,6 +39,6 @@ export default StyleSheet.create({
     backgroundColor: Colors.LINE_STROKE,
     width: width * 0.8,
     marginLeft: width * 0.04,
-    marginVertical: width * 0.03,
+    marginVertical: width * 0.029,
   },
 });

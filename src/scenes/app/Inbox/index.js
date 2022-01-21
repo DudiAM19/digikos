@@ -26,7 +26,11 @@ const Inbox = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
-      {tabActive === 0 ? <Notification /> : <NeedApprovel />}
+      {tabActive === 0 ? (
+        <Notification />
+      ) : (
+        <NeedApprovel navigation={navigation} />
+      )}
     </Container>
   );
 };
