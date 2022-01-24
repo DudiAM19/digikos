@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {Icon} from 'components';
 import styles from './styles';
+import {Colors} from 'styles';
 
 const PropertyCard = () => {
   return (
@@ -13,21 +14,26 @@ const PropertyCard = () => {
         style={styles.image}
       />
       <View style={styles.body}>
-        <View style={styles.section}>
-          <Icon
-            name="apartment"
-            type="MaterialIcons"
-            style={styles.propertyIcon}
-          />
-          <Text style={styles.propertyName}>Anindita Timur Selatan</Text>
+        <View style={styles.ratingSection}>
+          <Icon name="star" type="FontAwesome" style={styles.ratingIcon} />
+          <Text style={styles.ratingValue}>4.0</Text>
         </View>
-        <Text style={styles.propertyRoomTotal}>40 Kamar</Text>
-        <View style={styles.section}>
-          <Text style={styles.indicatorEmpty}>5 Tersedia</Text>
-          <Text style={styles.separatorPipe}>|</Text>
-          <Text style={styles.indicatorFilled}>10 Tersewa</Text>
+        <Text style={styles.propertyName}>Anindita Timur A2</Text>
+        <Text style={styles.propertyPrice}>Rp 250.000</Text>
+        <Text style={styles.propertyPriceLable}>Harga Sewa / Bulan</Text>
+        <View style={styles.propertyInfo}>
+          <Text style={styles.propertyInfoText(Colors.ORANGE)}>15 Tersewa</Text>
+          <Text style={styles.propertyInfoDot}>•</Text>
+          <Text style={styles.propertyInfoText(Colors.GREEN)}>5 Tersedia</Text>
         </View>
       </View>
+      <TouchableOpacity style={styles.optionButton}>
+        <Icon
+          name="dots-vertical"
+          type="MaterialCommunityIcons"
+          style={styles.optionButtonIcon}
+        />
+      </TouchableOpacity>
     </View>
   );
 };

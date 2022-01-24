@@ -5,5 +5,15 @@ import Input from './Input';
 import Header from './Header';
 import PropertyCard from './PropertyCard';
 import ModalWarning from './ModalWarning';
+import SearchBox from './SearchBox';
 
-export {Icon, Container, Button, Input, Header, PropertyCard, ModalWarning};
+export {
+  Icon,
+  Container,
+  Button,
+  Input,
+  Header,
+  PropertyCard,
+  ModalWarning,
+  SearchBox,
+};

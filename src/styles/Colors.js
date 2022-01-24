@@ -14,3 +14,4 @@ export const GREEN = '#1FD426';
 export const BLACK = '#000000';
 export const GREEN_LIGHT = '#1DAE05';
 export const RED = '#FF0606';
+export const YELLOW = '#FDC01A';
