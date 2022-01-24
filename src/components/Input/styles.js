@@ -4,9 +4,13 @@ import {Colors, FONTS} from 'styles';
 const {width} = Dimensions.get('window');
 
 export default StyleSheet.create({
-  inputItem: isFocused => ({
+  inputItem: (isFocused, isError) => ({
     borderBottomWidth: 1,
-    borderBottomColor: isFocused ? Colors.PRIMARY : Colors.LINE_STROKE,
+    borderBottomColor: isFocused
+      ? Colors.PRIMARY
+      : isError
+      ? Colors.RED_HEAVY
+      : Colors.LINE_STROKE,
     marginVertical: width * 0.02,
   }),
   inputLabel: {
@@ -20,5 +24,10 @@ export default StyleSheet.create({
     marginTop: -width * 0.025,
     paddingBottom: width * 0.015,
     color: Colors.DRAKER_BLACK,
+  },
+  error: {
+    fontFamily: FONTS.poppins[400],
+    color: Colors.RED_HEAVY,
+    fontSize: RFValue(11),
   },
 });

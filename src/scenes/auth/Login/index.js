@@ -2,8 +2,11 @@ import React from 'react';
 import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
 import {Icon, Container, Button, Input} from 'components';
 import styles from './styles';
+import useLogin from './useLogin';
 
 const Login = ({navigation}) => {
+  const {credentials, setCredentials, loading, handleUserLogin, error} =
+    useLogin(navigation);
   return (
     <Container backgroundColor="white">
       <ScrollView>
@@ -29,16 +32,29 @@ const Login = ({navigation}) => {
             <Input
               label="No.Telepon atau Kode Kamar"
               placeholder="example@mail.com"
+              error={error?.phone}
+              onChangeText={val => setCredentials({...credentials, phone: val})}
+              value={credentials.phone}
             />
-            <Input label="Password" placeholder="*******" />
+            <Input
+              label="Password"
+              placeholder="*******"
+              secureTextEntry={true}
+              error={error?.password}
+              onChangeText={val =>
+                setCredentials({...credentials, password: val})
+              }
+              value={credentials.password}
+            />
           </View>
         </View>
       </ScrollView>
       <View style={styles.buttonSection}>
         <Button
           title="Masuk"
+          loading={loading}
           style={styles.button}
-          onPress={() => navigation.navigate('app')}
+          onPress={() => handleUserLogin()}
         />
       </View>
     </Container>

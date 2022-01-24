@@ -5,7 +5,7 @@ import {name as appName} from '../../app.json';
 import rootReducer from 'reducers';
 import {storeUserProfile, signIn} from 'actions';
 import thunk from 'redux-thunk';
-import {getCurrentUser} from 'utils';
+import {getCurrentUser} from 'utils/auth';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

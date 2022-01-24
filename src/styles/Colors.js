@@ -15,3 +15,4 @@ export const BLACK = '#000000';
 export const GREEN_LIGHT = '#1DAE05';
 export const RED = '#FF0606';
 export const YELLOW = '#FDC01A';
+export const RED_HEAVY = 'rgba(225, 36, 40, 0.6)';

@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity, ActivityIndicator} from 'react-native';
 import styles from './styles';
+import {Colors} from 'styles';
 
 const Button = props => {
   return (
@@ -8,9 +9,17 @@ const Button = props => {
       style={[styles.container, props.style]}
       disabled={props.disabled}
       onPress={props.onPress}>
-      <Text style={styles.title}>{props.title}</Text>
+      {props.loading ? (
+        <ActivityIndicator size="small" color={Colors.WHITE} />
+      ) : (
+        <Text style={styles.title}>{props.title}</Text>
+      )}
     </TouchableOpacity>
   );
+};
+
+Button.defaultProps = {
+  loading: false,
 };
 
 export default Button;

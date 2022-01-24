@@ -7,7 +7,7 @@ const AuthStackScreen = () => (
   <AuthStack.Navigator screenOptions={{headerShown: false}}>
     <AuthStack.Screen name="OnBoarding" component={OnBoarding} />
     <AuthStack.Screen name="Login" component={Login} />
-    <AuthStack.Screen name="ChooseRole" component={ChooseRole} />
+    {/* <AuthStack.Screen name="ChooseRole" component={ChooseRole} /> */}
     <AuthStack.Screen name="Register" component={Register} />
   </AuthStack.Navigator>
 );
