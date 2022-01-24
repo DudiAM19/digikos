@@ -3,6 +3,7 @@ import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import {Container, Header, Icon} from 'components';
 import styles from './styles';
 import Modal from 'react-native-modal';
+import {Colors} from 'styles';
 
 const DetailBillPayment = ({navigation}) => {
   const [modal, setModal] = useState(false);
@@ -12,7 +13,7 @@ const DetailBillPayment = ({navigation}) => {
   };
 
   return (
-    <Container backgroundColor="transparent">
+    <Container backgroundColor={Colors.BACKGROUND} barColor="transparent">
       <Header
         smTitle="Detail Pembayaran"
         transparent={true}

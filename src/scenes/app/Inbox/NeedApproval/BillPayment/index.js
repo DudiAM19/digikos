@@ -64,7 +64,7 @@ const Item = props => {
 const BillPayment = ({navigation}) => {
   return (
     <Container backgroundColor="white">
-      <Header smTitle="Pembayaran Tagihan" />
+      <Header smTitle="Pembayaran Tagihan" navigation={navigation} />
       <View style={styles.container}>
         <FlatList
           data={DATA}

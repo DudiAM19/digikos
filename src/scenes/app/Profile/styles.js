@@ -33,20 +33,21 @@ export default StyleSheet.create({
   premiummember: {
     flexDirection: 'row',
     alignItems: 'center',
-    height: width * 0.17,
+    height: width * 0.15,
     backgroundColor: '#1FB8FC1A',
     borderRadius: width * 0.03,
     marginVertical: width * 0.06,
   },
   imgpremiummember: {
-    width: width * 0.11,
-    height: width * 0.11,
+    width: width * 0.1,
+    height: width * 0.1,
     marginHorizontal: width * 0.03,
   },
   textpremiummember: {
     fontFamily: FONTS.poppins[500],
-    fontSize: RFValue(16),
+    fontSize: RFValue(14),
     flex: 1,
+    color: Colors.BLACK_TEXT,
     marginTop: width * 0.002,
   },
   chevronright: {
@@ -73,7 +74,8 @@ export default StyleSheet.create({
     fontFamily: FONTS.poppins[500],
     color: Colors.DRAKER_BLACK,
     flex: 1,
-    fontSize: RFValue(16),
+    fontSize: RFValue(14),
+    marginLeft: width * 0.035,
     marginTop: width * 0.01,
   },
 });
