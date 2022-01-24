@@ -27,7 +27,7 @@ const Login = ({navigation}) => {
           </View>
           <View style={styles.formSection}>
             <Input
-              label="Email atau No.Telepon"
+              label="No.Telepon atau Kode Kamar"
               placeholder="example@mail.com"
             />
             <Input label="Password" placeholder="*******" />
