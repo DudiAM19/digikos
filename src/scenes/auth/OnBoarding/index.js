@@ -16,7 +16,7 @@ const OnBoarding = ({navigation}) => {
         <Button title="Masuk" onPress={() => navigation.navigate('Login')} />
         <TouchableOpacity
           style={styles.btnsignup}
-          onPress={() => navigation.navigate('ChooseRole')}>
+          onPress={() => navigation.navigate('Register')}>
           <Text style={styles.textbtnnoaccount}>Belum punya akun?</Text>
           <Text style={styles.textbtnsingup}>Daftar</Text>
         </TouchableOpacity>

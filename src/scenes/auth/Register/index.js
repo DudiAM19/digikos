@@ -2,8 +2,12 @@ import React from 'react';
 import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
 import {Icon, Container, Button, Input} from 'components';
 import styles from './styles';
+import useRegister from './useRegister';
 
 const Register = ({navigation}) => {
+  const {credentials, setCredentials, error, loading, handleUserRegister} =
+    useRegister();
+
   return (
     <Container backgroundColor="white">
       <ScrollView>
@@ -26,17 +30,42 @@ const Register = ({navigation}) => {
             </View>
           </View>
           <View style={styles.formSection}>
-            <Input label="Nama Lengkap" placeholder="Masukkan nama lengkap" />
+            <Input
+              label="Nama Lengkap"
+              placeholder="Masukkan nama lengkap"
+              onChangeText={val =>
+                setCredentials({...credentials, full_name: val})
+              }
+              value={credentials.full_name}
+              error={error?.full_name}
+            />
             <Input
               label="Email atau No.Telepon"
-              placeholder="example@mail.com"
+              placeholder="08xxxxxxx"
+              onChangeText={val => setCredentials({...credentials, phone: val})}
+              value={credentials.phone}
+              error={error?.phone}
             />
-            <Input label="Password" placeholder="*******" />
+            <Input
+              label="Password"
+              placeholder="*******"
+              secureTextEntry={true}
+              onChangeText={val =>
+                setCredentials({...credentials, password: val})
+              }
+              value={credentials.password}
+              error={error?.password}
+            />
           </View>
         </View>
       </ScrollView>
       <View style={styles.buttonSection}>
-        <Button title="Daftar Sekarang" style={styles.button} />
+        <Button
+          title="Daftar Sekarang"
+          loading={loading}
+          onPress={() => handleUserRegister()}
+          style={styles.button}
+        />
       </View>
     </Container>
   );

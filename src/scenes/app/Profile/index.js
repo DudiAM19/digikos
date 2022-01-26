@@ -7,31 +7,31 @@ import useProfile from './useProfile';
 
 const DATA = [
   {
-    text: 'Pengaturan Akun',
+    name: 'Pengaturan Akun',
     icon: 'settings-outline',
     icontype: 'Ionicons',
     color: Colors.ORANGE,
   },
   {
-    text: 'Notifikasi',
+    name: 'Notifikasi',
     icon: 'notifications-none',
     icontype: 'MaterialIcons',
     color: '#AC4DFE',
   },
   {
-    text: 'Bantuan',
+    name: 'Bantuan',
     icon: 'help-circle',
     icontype: 'Feather',
     color: '#1FB8FC',
   },
   {
-    text: 'Berikan Feedback',
+    name: 'Berikan Feedback',
     icon: 'notification',
     icontype: 'AntDesign',
     color: '#EA307D',
   },
   {
-    text: 'Keluar',
+    name: 'Keluar',
     icon: 'log-out',
     icontype: 'Feather',
     color: '#F9B403',
@@ -46,14 +46,14 @@ const Item = props => {
         type={props.icontype}
         style={styles.iconfitur(props.color)}
       />
-      <Text style={styles.textfitur}>{props.text}</Text>
+      <Text style={styles.textfitur}>{props.name}</Text>
       <Icon name="chevron-right" type="Feather" style={styles.chevronright} />
     </TouchableOpacity>
   );
 };
 
 const Profile = ({navigation}) => {
-  const {userData} = useProfile(navigation);
+  const {userData, handleUserLogout} = useProfile(navigation);
   return (
     <Container backgroundColor={Colors.WHITE}>
       <Header lgTitle="Akun Saya" />
@@ -95,9 +95,13 @@ const Profile = ({navigation}) => {
               <Item
                 icon={item.icon}
                 icontype={item.icontype}
-                text={item.text}
+                name={item.name}
                 color={item.color}
-                onPress={() => navigation.navigate('SubscriptionDetails')}
+                onPress={() => {
+                  item.name === 'Keluar'
+                    ? handleUserLogout()
+                    : navigation.navigate('SubscriptionDetails');
+                }}
               />
             )}
           />

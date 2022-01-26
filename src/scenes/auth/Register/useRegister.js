@@ -1,15 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import {useState, useEffect} from 'react';
-import {userLogin} from 'utils/auth';
+import {userRegister} from 'utils/auth';
 import messaging from '@react-native-firebase/messaging';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useDispatch} from 'react-redux';
 import {storeUserProfile, signIn} from 'actions';
 
-const useLogin = navigation => {
+const useRegister = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState({});
   const [credentials, setCredentials] = useState({
+    full_name: '',
     phone: '',
     password: '',
     fcm_token: '',
@@ -25,20 +26,22 @@ const useLogin = navigation => {
     })();
   }, []);
 
-  const handleUserLogin = async () => {
+  const handleUserRegister = async () => {
     setLoading(true);
     setError({});
     if (validation()) {
       setLoading(false);
       return;
     }
-    const response = await userLogin(credentials);
+    const response = await userRegister(credentials);
     if (response.request.status === 200) {
       await AsyncStorage.setItem('userToken', response.data.data.access_token);
       dispatch(storeUserProfile(response.data.data.userdata));
       dispatch(signIn(response.data.data.access_token));
     } else if (response.request.status === 400) {
-      if (response.response.data?.phone) {
+      if (response.response.data?.full_name) {
+        setError({full_name: response.response.data.full_name});
+      } else if (response.response.data?.phone) {
         setError({phone: response.response.data.phone});
       } else if (response.response.data?.password) {
         setError({password: response.response.data.password});
@@ -48,12 +51,19 @@ const useLogin = navigation => {
   };
 
   const validation = () => {
-    if (credentials.phone === '' && credentials.password === '') {
+    if (
+      credentials.phone === '' &&
+      credentials.password === '' &&
+      credentials.full_name === ''
+    ) {
       setError({
+        full_name: 'Nama Lengkap tidak boleh kosong',
         phone: 'No.Telepon atau Kode Kamar tidak boleh kosong',
         password: 'Password tidak boleh kosong',
       });
       return true;
+    } else if (credentials.full_name === '') {
+      setError({full_name: 'Nama Lengkap tidak boleh kosong'});
     } else if (credentials.phone === '') {
       setError({phone: 'No.Telepon atau Kode Kamar tidak boleh kosong'});
       return true;
@@ -66,12 +76,12 @@ const useLogin = navigation => {
   };
 
   return {
-    loading,
     credentials,
     setCredentials,
-    handleUserLogin,
     error,
+    loading,
+    handleUserRegister,
   };
 };
 
-export default useLogin;
+export default useRegister;
