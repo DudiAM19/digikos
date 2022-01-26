@@ -6,6 +6,7 @@ import Header from './Header';
 import PropertyCard from './PropertyCard';
 import ModalWarning from './ModalWarning';
 import SearchBox from './SearchBox';
+import InputSelect from './InputSelect';
 
 export {
   Icon,
@@ -16,4 +17,5 @@ export {
   PropertyCard,
   ModalWarning,
   SearchBox,
+  InputSelect,
 };

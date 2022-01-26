@@ -6,7 +6,7 @@ import {Colors} from 'styles';
 const Button = props => {
   return (
     <TouchableOpacity
-      style={[styles.container, props.style]}
+      style={[styles.container(props.small), props.style]}
       disabled={props.disabled}
       onPress={props.onPress}>
       {props.loading ? (
@@ -20,6 +20,7 @@ const Button = props => {
 
 Button.defaultProps = {
   loading: false,
+  small: false,
 };
 
 export default Button;

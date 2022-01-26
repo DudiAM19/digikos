@@ -14,6 +14,7 @@ import {
   Failure,
   SubscriptionDetails,
   DetailBillPayment,
+  ProfileSetting,
 } from 'scenes';
 
 const Stack = createNativeStackNavigator();
@@ -38,6 +39,7 @@ const AppStack = () => {
         component={SubscriptionDetails}
       />
       <Stack.Screen name="DetailBillPayment" component={DetailBillPayment} />
+      <Stack.Screen name="ProfileSetting" component={ProfileSetting} />
     </Stack.Navigator>
   );
 };

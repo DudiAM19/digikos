@@ -15,14 +15,15 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   leftButton: {
-    flex: 0.1,
+    flex: 0.3,
   },
   leftButtonIcon: {
     fontSize: RFValue(22),
     color: Colors.DRAKER_BLACK,
   },
   rightButton: {
-    flex: 0.1,
+    flex: 0.3,
+    alignItems: 'flex-end',
   },
   rightButtonIcon: {
     fontSize: RFValue(20),
@@ -45,6 +46,20 @@ export default StyleSheet.create({
   lgTitle: {
     fontFamily: FONTS.poppins[500],
     fontSize: RFValue(17),
+    color: Colors.DRAKER_BLACK,
+  },
+  buttonSave: {
+    height: width * 0.06,
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: width * 0.03,
+    backgroundColor: Colors.BACKGROUND,
+  },
+  buttonSaveTitle: {
+    fontFamily: FONTS.poppins[500],
+    fontSize: RFValue(11.2),
+    marginTop: width * 0.005,
     color: Colors.DRAKER_BLACK,
   },
 });

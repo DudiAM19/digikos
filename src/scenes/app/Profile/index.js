@@ -11,30 +11,35 @@ const DATA = [
     icon: 'settings-outline',
     icontype: 'Ionicons',
     color: Colors.ORANGE,
+    route: 'ProfileSetting',
   },
   {
     name: 'Notifikasi',
     icon: 'notifications-none',
     icontype: 'MaterialIcons',
     color: '#AC4DFE',
+    route: 'SubscriptionDetails',
   },
   {
     name: 'Bantuan',
     icon: 'help-circle',
     icontype: 'Feather',
     color: '#1FB8FC',
+    route: 'SubscriptionDetails',
   },
   {
     name: 'Berikan Feedback',
     icon: 'notification',
     icontype: 'AntDesign',
     color: '#EA307D',
+    route: 'SubscriptionDetails',
   },
   {
     name: 'Keluar',
     icon: 'log-out',
     icontype: 'Feather',
     color: '#F9B403',
+    route: 'SubscriptionDetails',
   },
 ];
 
@@ -100,7 +105,7 @@ const Profile = ({navigation}) => {
                 onPress={() => {
                   item.name === 'Keluar'
                     ? handleUserLogout()
-                    : navigation.navigate('SubscriptionDetails');
+                    : navigation.navigate(item.route);
                 }}
               />
             )}

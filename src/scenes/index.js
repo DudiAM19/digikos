@@ -4,7 +4,7 @@ import Login from './auth/Login';
 import ChooseRole from './auth/ChooseRole';
 import Register from './auth/Register';
 
-// app
+// app owner
 import Home from './app/Home';
 import Tenant from './app/Tenant';
 import Inbox from './app/Inbox';
@@ -21,6 +21,9 @@ import TenantComplaint from './app/Inbox/NeedApproval/TenantComplaint';
 import TenantOperation from './app/Inbox/NeedApproval/TenantOperation';
 import SubscriptionDetails from './app/Profile/SubscriptionDetails';
 import DetailBillPayment from './app/Inbox/NeedApproval/BillPayment/DetailBillPayment';
+
+// app tenants
+import ProfileSetting from './app/Profile/ProfileSetting';
 
 export {
   OnBoarding,
@@ -43,4 +46,5 @@ export {
   Failure,
   SubscriptionDetails,
   DetailBillPayment,
+  ProfileSetting,
 };
