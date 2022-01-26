@@ -22,18 +22,20 @@ const RootStackScreen = ({userToken}) => {
 
 const RootNavigator = () => {
   const userToken = useSelector(state => state.auth.userToken);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 1000);
   });
 
   if (loading) {
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <ActivityIndicator size="small" color={Colors.PRIMARY} />
-    </View>;
+    return (
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <ActivityIndicator size="small" color={Colors.PRIMARY} />
+      </View>
+    );
   }
 
   return (

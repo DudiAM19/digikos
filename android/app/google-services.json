@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "939431215956",
+    "project_id": "digitalkos",
+    "storage_bucket": "digitalkos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939431215956:android:746609231713b068c5bec1",
+        "android_client_info": {
+          "package_name": "com.bapakost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939431215956-690au5ujkd07hj1nulaloq7tfi3c58do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOlVQ6OA3_HZn7JTfZDYOzHYNy9Slh6bs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939431215956-690au5ujkd07hj1nulaloq7tfi3c58do.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

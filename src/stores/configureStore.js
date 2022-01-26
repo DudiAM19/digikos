@@ -33,9 +33,9 @@ const getAsyncStorage = () => {
       if (userToken) {
         await getCurrentUser()
           .then(resp => {
-            dispatch(storeUserProfile(resp.data));
+            dispatch(storeUserProfile(resp.data.data));
             console.log('STORE => user data');
-            console.log(resp.data);
+            console.log(resp.data.data);
           })
           .catch(e => {
             console.log(e);

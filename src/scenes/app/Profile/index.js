@@ -3,6 +3,7 @@ import {View, Text, Image, TouchableOpacity, FlatList} from 'react-native';
 import {Container, Header, Icon} from 'components';
 import {Colors} from 'styles';
 import styles from './styles';
+import useProfile from './useProfile';
 
 const DATA = [
   {
@@ -52,17 +53,24 @@ const Item = props => {
 };
 
 const Profile = ({navigation}) => {
+  const {userData} = useProfile(navigation);
   return (
     <Container backgroundColor={Colors.WHITE}>
       <Header lgTitle="Akun Saya" />
       <View style={styles.container}>
         <View style={styles.profilesection}>
           <View style={styles.textprofile}>
-            <Text style={styles.textname}>Yudi Wahyudi</Text>
-            <Text style={styles.textowner}>Pemilik</Text>
+            <Text style={styles.textname}>{userData.full_name}</Text>
+            <Text style={styles.textowner}>
+              {userData.role === 'owner' ? 'Pemilik' : 'Penyewa'}
+            </Text>
           </View>
           <Image
-            source={require('../../../assets/images/User.png')}
+            source={
+              userData.avatar
+                ? {uri: userData.avatar}
+                : require('assets/images/User.png')
+            }
             style={styles.imgprofile}
           />
         </View>

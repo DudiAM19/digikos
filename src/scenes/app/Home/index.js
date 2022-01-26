@@ -17,6 +17,9 @@ import {LineChart} from 'react-native-chart-kit';
 import styles from './styles';
 import {menu} from 'constants';
 import {useIsFocused} from '@react-navigation/native';
+import useHome from './useHome';
+import moment from 'moment';
+
 const screenWidth = Dimensions.get('window').width;
 
 const data = {
@@ -48,7 +51,7 @@ const chartConfig = {
 
 const Home = ({navigation}) => {
   const isFocused = useIsFocused();
-  // console.log(isFocused)
+  const {userData} = useHome(navigation);
   return (
     <SafeAreaView style={styles.root}>
       {isFocused && (
@@ -60,14 +63,22 @@ const Home = ({navigation}) => {
           imageStyle={styles.imageBackground}
           resizeMode="contain"
           style={styles.container}>
-          <Text style={styles.currentDay}>Senin, 02 Januari 2022</Text>
+          <Text style={styles.currentDay}>
+            {moment().format('dddd, DD MMMM YYYY')}
+          </Text>
           <View style={styles.userInfoSection}>
             <View style={styles.userInfo}>
-              <Text style={styles.username}>Yudi Wahyudi</Text>
-              <Text style={styles.userRole}>Pemilik</Text>
+              <Text style={styles.username}>{userData.full_name}</Text>
+              <Text style={styles.userRole}>
+                {userData.role === 'owner' ? 'Pemilik' : 'Penyewa'}
+              </Text>
             </View>
             <Image
-              source={require('assets/images/5eb13bfdb4659efea4f8dace_profile-dummy.png')}
+              source={
+                userData.avatar
+                  ? {uri: userData.avatar}
+                  : require('assets/images/5eb13bfdb4659efea4f8dace_profile-dummy.png')
+              }
               style={styles.userAvatar}
             />
           </View>

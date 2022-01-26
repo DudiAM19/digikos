@@ -31,7 +31,7 @@ const Login = ({navigation}) => {
           <View style={styles.formSection}>
             <Input
               label="No.Telepon atau Kode Kamar"
-              placeholder="example@mail.com"
+              placeholder="08xxxxxxx"
               error={error?.phone}
               onChangeText={val => setCredentials({...credentials, phone: val})}
               value={credentials.phone}
