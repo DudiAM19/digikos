@@ -4,8 +4,11 @@ import {Container, Header, Icon, Input, InputSelect} from 'components';
 import {Colors} from 'styles';
 import styles from './styles';
 import {gender} from 'constants';
+import useProfileSetting from './useProfileSetting';
 
 const ProfileSetting = ({navigation}) => {
+  const {loading, data, owner, region, setRegion} =
+    useProfileSetting(navigation);
   return (
     <Container backgroundColor={Colors.WHITE}>
       <Header
@@ -42,13 +45,35 @@ const ProfileSetting = ({navigation}) => {
           <InputSelect
             label="Provinsi"
             placeholder="Pilih provinsi"
-            data={gender}
+            data={region.province.data}
+            onChangeData={val =>
+              setRegion({
+                ...region,
+                province: {...region.province, selected: val},
+              })
+            }
           />
-          <InputSelect label="Kota" placeholder="Pilih kota" data={gender} />
+          <InputSelect
+            label="Kota"
+            placeholder="Pilih kota"
+            data={region.city.data}
+            onChangeData={val =>
+              setRegion({
+                ...region,
+                city: {...region.city, selected: val},
+              })
+            }
+          />
           <InputSelect
             label="Kecamatan"
             placeholder="Pilih kecamatan"
-            data={gender}
+            data={region.district.data}
+            onChangeData={val =>
+              setRegion({
+                ...region,
+                district: {...region.district, selected: val},
+              })
+            }
           />
         </View>
       </View>

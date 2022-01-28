@@ -12,6 +12,12 @@ const InputSelect = props => {
     setModalShow(false);
     setSelected(null);
   };
+
+  const handleSelectItem = item => {
+    setSelected(item.name);
+    props.onChangeData(item);
+  };
+
   return (
     <View>
       <View style={styles.inputItem}>
@@ -19,7 +25,11 @@ const InputSelect = props => {
         <TouchableOpacity
           onPress={() => setModalShow(true)}
           style={styles.inputSection}>
-          <Text style={styles.inputPlaceholder}>{props.placeholder}</Text>
+          {selected ? (
+            <Text style={styles.inputValue}>{selected}</Text>
+          ) : (
+            <Text style={styles.inputPlaceholder}>{props.placeholder}</Text>
+          )}
           <Icon name="chevron-down" type="Feather" style={styles.arrowIcon} />
         </TouchableOpacity>
       </View>
@@ -49,7 +59,7 @@ const InputSelect = props => {
             keyExtractor={(item, index) => index.toString()}
             renderItem={({item, index}) => (
               <TouchableOpacity
-                onPress={() => setSelected(item.name)}
+                onPress={() => handleSelectItem(item)}
                 style={styles.modalItemSection}>
                 <Text style={styles.modalItemTitle}>{item.name}</Text>
                 {selected === item.name && (
@@ -63,7 +73,7 @@ const InputSelect = props => {
             )}
           />
           <View>
-            <Button small title="Simpan" />
+            <Button small title="Simpan" onPress={() => setModalShow(false)} />
           </View>
         </View>
       </Modal>

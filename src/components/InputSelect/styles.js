@@ -29,6 +29,14 @@ export default StyleSheet.create({
     paddingBottom: width * 0.015,
     color: Colors.GREY,
   },
+  inputValue: {
+    flex: 1,
+    fontSize: RFValue(14),
+    paddingHorizontal: 0,
+    marginTop: -width * 0.025,
+    paddingBottom: width * 0.015,
+    color: Colors.DRAKER_BLACK,
+  },
   arrowIcon: {
     fontSize: RFValue(16),
     color: Colors.GREY_LIGHT,
