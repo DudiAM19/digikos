@@ -4,46 +4,69 @@ import {RFValue} from 'react-native-responsive-fontsize';
 const {width} = Dimensions.get('window');
 
 export default StyleSheet.create({
-  tenantsection: {
-    flexDirection: 'row',
-    backgroundColor: 'white',
+  container: {
     paddingHorizontal: width * 0.04,
-    width: width,
-    height: width * 0.2,
+  },
+  tenantSection: {
+    flexDirection: 'row',
     alignItems: 'center',
+    paddingHorizontal: width * 0.04,
   },
-  imgprofile: {
-    width: width * 0.12,
-    height: width * 0.12,
+  avatar: {
+    width: width * 0.11,
+    height: width * 0.11,
+    borderRadius: 75,
   },
-  textsection: {
-    marginHorizontal: width * 0.04,
+  tenantInfoSection: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: width * 0.04,
+    paddingVertical: width * 0.03,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.LINE_STROKE,
+  },
+  body: {
     flex: 1,
   },
-  textname: {
+  tenantName: {
     fontFamily: FONTS.poppins[500],
-    fontSize: RFValue(15.5),
+    fontSize: RFValue(14),
     color: Colors.BLACK,
   },
-  textroom: {
-    fontFamily: FONTS.poppins[500],
+  tenantInfoRoom: {
+    fontFamily: FONTS.poppins[400],
     fontSize: RFValue(12),
-    color: Colors.DRAKER_BLACK,
-    marginTop: -width * 0.01,
+    color: Colors.BLACK_TEXT,
+    marginTop: -width * 0.005,
   },
-  iconsection: {
+  connectSection: {
     flexDirection: 'row',
-    // paddingHorizontal: width * 0.05,
+    alignItems: 'center',
   },
-  icon: {
-    fontSize: RFValue(25),
-    color: Colors.LIGHT_TEXT,
-    marginHorizontal: width * 0.03,
+  connectIcon: {
+    width: width * 0.06,
+    height: width * 0.06,
   },
-  border: {
-    width: width * 0.72,
-    height: width * 0.002,
-    backgroundColor: Colors.LINE_STROKE,
-    marginLeft: width * 0.22,
+  ml20: {
+    marginLeft: width * 0.03,
+  },
+  noDataSection: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: width * 0.15,
+    marginHorizontal: width * 0.1,
+  },
+  noItemGif: {
+    width: width * 0.7,
+    height: width * 0.7,
+  },
+  noItemLable: {
+    fontFamily: FONTS.poppins[400],
+    fontSize: RFValue(13),
+    color: Colors.BLACK_TEXT,
+    marginTop: -width * 0.005,
+    textAlign: 'center',
   },
 });
