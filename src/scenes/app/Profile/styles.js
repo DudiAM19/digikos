@@ -17,8 +17,9 @@ export default StyleSheet.create({
     flex: 1,
   },
   imgprofile: {
-    width: width * 0.14,
+    width: width * 0.12,
     height: width * 0.12,
+    borderRadius: 75,
   },
   textname: {
     fontFamily: FONTS.poppins[600],
@@ -28,7 +29,8 @@ export default StyleSheet.create({
   textowner: {
     fontFamily: FONTS.poppins[500],
     color: Colors.LIGHT_TEXT,
-    fontSize: RFValue(16),
+    fontSize: RFValue(14),
+    marginTop: -width * 0.02,
   },
   premiummember: {
     flexDirection: 'row',

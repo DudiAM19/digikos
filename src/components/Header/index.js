@@ -1,10 +1,19 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, ActivityIndicator} from 'react-native';
 import {Icon} from 'components';
 import styles from './styles';
+import {Colors} from 'styles';
 
 const Header = props => {
-  const {smTitle, onSearch, lgTitle, navigation, transparent, btnSave} = props;
+  const {
+    smTitle,
+    onSearch,
+    lgTitle,
+    navigation,
+    transparent,
+    btnSave,
+    btnSaveLoading,
+  } = props;
   return (
     <View style={styles.container(transparent)}>
       <View style={styles.section}>
@@ -44,8 +53,12 @@ const Header = props => {
             </TouchableOpacity>
           )}
           {btnSave && (
-            <TouchableOpacity style={styles.buttonSave}>
-              <Text style={styles.buttonSaveTitle}>Simpan</Text>
+            <TouchableOpacity onPress={btnSave} style={styles.buttonSave}>
+              {btnSaveLoading ? (
+                <ActivityIndicator size="small" color={Colors.DRAKER_BLACK} />
+              ) : (
+                <Text style={styles.buttonSaveTitle}>Simpan</Text>
+              )}
             </TouchableOpacity>
           )}
         </View>
@@ -60,6 +73,7 @@ Header.defaultProps = {
   onSearch: undefined,
   transparent: false,
   btnSave: undefined,
+  btnSaveLoading: false,
 };
 
 export default Header;

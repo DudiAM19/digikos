@@ -23,10 +23,11 @@ const InputSelect = props => {
       <View style={styles.inputItem}>
         <Text style={styles.inputLabel}>{props.label}</Text>
         <TouchableOpacity
+          disabled={props.disabled}
           onPress={() => setModalShow(true)}
           style={styles.inputSection}>
-          {selected ? (
-            <Text style={styles.inputValue}>{selected}</Text>
+          {props.selected ? (
+            <Text style={styles.inputValue}>{props.selected.name}</Text>
           ) : (
             <Text style={styles.inputPlaceholder}>{props.placeholder}</Text>
           )}
@@ -84,6 +85,8 @@ const InputSelect = props => {
 InputSelect.defaultProps = {
   error: null,
   data: [],
+  disabled: false,
+  selected: null,
 };
 
 export default InputSelect;

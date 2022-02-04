@@ -27,6 +27,11 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  avatar: {
+    height: width * 0.14,
+    width: width * 0.14,
+    borderRadius: 75,
+  },
   avatarCameraIcon: {
     fontSize: RFValue(21),
     color: Colors.DRAKER_BLACK,

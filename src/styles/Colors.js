@@ -1,4 +1,5 @@
 export const PRIMARY = '#1FB8FC';
+// export const PRIMARY = '#5f4cf2';
 export const DRAKER_BLACK = '#404040';
 export const LINE_STROKE = '#DDE5E9';
 export const GREY_LIGHT = '#616060';
