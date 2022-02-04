@@ -4,27 +4,33 @@ import {Icon} from 'components';
 import styles from './styles';
 import {Colors} from 'styles';
 
-const PropertyCard = () => {
+const PropertyCard = props => {
   return (
     <View style={styles.container}>
       <Image
         source={{
-          uri: 'https://static.leonardo-hotels.com/image/RCTWN_LHBU_01_Jul19_4000X2600_2048x1365_desktop_2.jpeg',
+          uri: props.images,
         }}
         style={styles.image}
       />
       <View style={styles.body}>
         <View style={styles.ratingSection}>
           <Icon name="star" type="FontAwesome" style={styles.ratingIcon} />
-          <Text style={styles.ratingValue}>4.0</Text>
+          <Text style={styles.ratingValue}>{props.rating}</Text>
         </View>
-        <Text style={styles.propertyName}>Anindita Timur A2</Text>
-        <Text style={styles.propertyPrice}>Rp 250.000</Text>
-        <Text style={styles.propertyPriceLable}>Harga Sewa / Bulan</Text>
+        <Text style={styles.propertyName}>{props.name}</Text>
+        <Text style={styles.propertyPrice}>{props.rental_costs}</Text>
+        <Text style={styles.propertyPriceLable}>
+          Harga Sewa / {props.rental_type}
+        </Text>
         <View style={styles.propertyInfo}>
-          <Text style={styles.propertyInfoText(Colors.ORANGE)}>15 Tersewa</Text>
+          <Text style={styles.propertyInfoText(Colors.ORANGE)}>
+            {props.rented} Tersewa
+          </Text>
           <Text style={styles.propertyInfoDot}>•</Text>
-          <Text style={styles.propertyInfoText(Colors.GREEN)}>5 Tersedia</Text>
+          <Text style={styles.propertyInfoText(Colors.GREEN)}>
+            {props.empty} Tersedia
+          </Text>
         </View>
       </View>
       <TouchableOpacity style={styles.optionButton}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, FlatList} from 'react-native';
 import {
   Container,
   Header,
@@ -17,7 +17,8 @@ import useProperty from './useProperty';
 const FILTERS = ['Apartemen', 'Hotel', 'Kost'];
 
 const Property = ({navigation}) => {
-  const {selected, setSelected} = useProperty();
+  const {selected, setSelected, property} = useProperty(navigation);
+  console.log(property);
   return (
     <Container backgroundColor={Colors.WHITE}>
       <Header smTitle="Daftar Properti" navigation={navigation} />
@@ -51,8 +52,21 @@ const Property = ({navigation}) => {
             </TouchableOpacity>
           ))}
         </View>
-        <PropertyCard />
-        <PropertyCard />
+        <FlatList
+          data={property}
+          keyExtractor={(item, index) => index.toString}
+          renderItem={({item}) => (
+            <PropertyCard
+              images={item.images}
+              rating={item.rating}
+              name={item.name}
+              rental_costs={item.rental_costs}
+              rental_type={item.rental_type}
+              rented={item.rented}
+              empty={item.empty}
+            />
+          )}
+        />
       </View>
       <ActionButton hideShadow={true} buttonColor={Colors.PRIMARY}>
         <ActionButton.Item

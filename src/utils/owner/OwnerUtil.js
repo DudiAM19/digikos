@@ -8,3 +8,7 @@ export const getOwnerProfile = () => {
 export const getListTenants = () => {
   return apiGet(`${API_URL}/owner/tenant`);
 };
+
+export const getListProperty = () => {
+  return apiGet(`${API_URL}/owner/property`);
+};
