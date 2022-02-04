@@ -9,8 +9,9 @@ const useTenant = navigation => {
     const unsubscribe = navigation.addListener('focus', async () => {
       const response = await getListTenants();
       if (response.request.status === 200) {
-        setTenants(response.data);
+        setTenants(response.data.data);
         setLoading(false);
+        console.log(response.data);
       } else {
         setLoading(false);
         alert('Oops, Terjadi kesalah saat mengambil data');

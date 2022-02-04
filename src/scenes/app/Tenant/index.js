@@ -61,6 +61,7 @@ const DATA = [
 
 const Tenant = ({navigation}) => {
   const {loading, tenants} = useTenant(navigation);
+  console.log(tenants);
   return (
     <Container backgroundColor={Colors.WHITE}>
       <Header

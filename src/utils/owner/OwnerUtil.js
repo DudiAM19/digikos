@@ -12,3 +12,7 @@ export const getListTenants = () => {
 export const updateProfile = (data, config) => {
   return apiPost(`${API_URL}/owner/update-profile`, data, config);
 };
+
+export const getListProperty = () => {
+  return apiGet(`${API_URL}/owner/property`);
+};
