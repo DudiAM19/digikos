@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, FlatList} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  FlatList,
+  ActivityIndicator,
+  Image,
+} from 'react-native';
 import {
   Container,
   Header,
@@ -7,6 +14,8 @@ import {
   Icon,
   ModalWarning,
   SearchBox,
+  Button,
+  NotFoundCard,
 } from 'components';
 import ActionButton from 'react-native-action-button';
 import LinearGradient from 'react-native-linear-gradient';
@@ -16,9 +25,26 @@ import useProperty from './useProperty';
 
 const FILTERS = ['Apartemen', 'Hotel', 'Kost'];
 
+const DATA = [
+  {
+    id: 1,
+    name: 'Anindita Timur #1',
+    type: 'apartemen',
+    rental_costs: 4200000,
+    rental_type: 'yearly',
+    images:
+      'https://i.pinimg.com/736x/af/17/a3/af17a38d8a9f51cb4bbabaf8c49dc67d--mobile-design-app-design.jpg',
+    total_room: 3,
+    rented: 1,
+    empty_room: 2,
+    rating: 3.7,
+  },
+];
+
 const Property = ({navigation}) => {
-  const {selected, setSelected, property} = useProperty(navigation);
+  const {selected, setSelected, property, loading} = useProperty(navigation);
   console.log(property);
+
   return (
     <Container backgroundColor={Colors.WHITE}>
       <Header smTitle="Daftar Properti" navigation={navigation} />
@@ -52,21 +78,21 @@ const Property = ({navigation}) => {
             </TouchableOpacity>
           ))}
         </View>
-        <FlatList
-          data={property}
-          keyExtractor={(item, index) => index.toString}
-          renderItem={({item}) => (
-            <PropertyCard
-              images={item.images}
-              rating={item.rating}
-              name={item.name}
-              rental_costs={item.rental_costs}
-              rental_type={item.rental_type}
-              rented={item.rented}
-              empty={item.empty}
-            />
-          )}
-        />
+        {loading ? (
+          <ActivityIndicator size="small" color={Colors.PRIMARY} />
+        ) : property > 0 ? (
+          <FlatList
+            data={property}
+            keyExtractor={(item, index) => index.toString}
+            renderItem={({item}) => <PropertyCard property={item} />}
+          />
+        ) : (
+          <NotFoundCard
+            text={
+              'Kamu belum memiliki property. \nTambah penyewa atau property kamu disini'
+            }
+          />
+        )}
       </View>
       <ActionButton hideShadow={true} buttonColor={Colors.PRIMARY}>
         <ActionButton.Item

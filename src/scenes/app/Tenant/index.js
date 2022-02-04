@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
 } from 'react-native';
-import {Container, Header, Button} from 'components';
+import {Container, Header, NotFoundCard} from 'components';
 import {Colors} from 'styles';
 import styles from './styles';
 import useTenant from './useTenant';
@@ -62,6 +62,7 @@ const DATA = [
 const Tenant = ({navigation}) => {
   const {loading, tenants} = useTenant(navigation);
   console.log(tenants);
+
   return (
     <Container backgroundColor={Colors.WHITE}>
       <Header
@@ -83,21 +84,12 @@ const Tenant = ({navigation}) => {
           )}
         />
       ) : (
-        <View style={styles.noDataSection}>
-          <Image
-            source={require('assets/images/no_item.gif')}
-            style={styles.noItemGif}
-          />
-          <Text style={styles.noItemLable}>
-            Kamu belum memiliki penyewa. {'\n'} Tambah penyewa atau property
-            kamu disini
-          </Text>
-          <Button
-            small
-            title="Daftar Properti"
-            onPress={() => navigation.navigate('Property')}
-          />
-        </View>
+        <NotFoundCard
+          text={
+            'Kamu belum memiliki property. \nTambah penyewa atau property kamu disini'
+          }
+          onPress={() => navigation.navigate('Property')}
+        />
       )}
     </Container>
   );

@@ -4,36 +4,36 @@ import {Icon} from 'components';
 import styles from './styles';
 import {Colors} from 'styles';
 
-const PropertyCard = props => {
+const PropertyCard = ({property}) => {
   return (
     <View style={styles.container}>
       <Image
         source={{
-          uri: props.images,
+          uri: property.images,
         }}
         style={styles.image}
       />
-      <TouchableOpacity style={styles.body}>
+      <View style={styles.body}>
         <View style={styles.ratingSection}>
           <Icon name="star" type="FontAwesome" style={styles.ratingIcon} />
-          <Text style={styles.ratingValue}>{props.rating}</Text>
+          <Text style={styles.ratingValue}>{property.rating}</Text>
         </View>
-        <Text style={styles.propertyName}>{props.name}</Text>
-        <Text style={styles.propertyPrice}>{props.rental_costs}</Text>
+        <Text style={styles.propertyName}>{property.name}</Text>
+        <Text style={styles.propertyPrice}>{property.rental_costs}</Text>
         <Text style={styles.propertyPriceLable}>
-          Harga Sewa / {props.rental_type}
+          Harga Sewa / {property.rental_type}
         </Text>
         <View style={styles.propertyInfo}>
           <Text style={styles.propertyInfoText(Colors.ORANGE)}>
-            {props.rented} Tersewa
+            {property.rented} Tersewa
           </Text>
           <Text style={styles.propertyInfoDot}>•</Text>
           <Text style={styles.propertyInfoText(Colors.GREEN)}>
-            {props.empty} Tersedia
+            {property.empty} Tersedia
           </Text>
         </View>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => alert('ok')} style={styles.optionButton}>
+      </View>
+      <TouchableOpacity style={styles.optionButton}>
         <Icon
           name="dots-vertical"
           type="MaterialCommunityIcons"

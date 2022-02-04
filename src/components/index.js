@@ -7,6 +7,7 @@ import PropertyCard from './PropertyCard';
 import ModalWarning from './ModalWarning';
 import SearchBox from './SearchBox';
 import InputSelect from './InputSelect';
+import NotFoundCard from './NotFoundCard';
 
 export {
   Icon,
@@ -18,4 +19,5 @@ export {
   ModalWarning,
   SearchBox,
   InputSelect,
+  NotFoundCard,
 };
